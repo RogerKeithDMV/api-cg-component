@@ -12,6 +12,8 @@ app.post('/', async(req, res)=>{
   properties.method = req.body.method;
   properties.api = req.body.api;
   properties.auth = req.body.auth;
+  properties.authType = req.body.authType;
+  properties.addData = req.body.addData;
   
     try{
       const result = await api({data:properties},{});
