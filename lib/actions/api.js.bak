@@ -20,9 +20,8 @@ const {emits} = constants;
         log.info(constants.FINISH_EXEC);
         this.emit(emits.end);
     } catch (e) {
-        log.error(`ERROR: ${e}`);
-        const emsg = e.toString();
-        this.emit('error', e);
-        await rabbitmq.producerErrorMessage(msg ,emsg);
+        log.error(e);
+        this.emit(emits.error, e);
+        await rabbitmq.producerErrorMessage(msg.toString(), e.toString());
     }
 };
