@@ -7,9 +7,9 @@
     "fields": {}
   },
   "triggers": {
-    "apiclientnodejs": {
-      "title": "Get the json response of an api service.",
-      "main": "./lib/triggers/processTrigger.js"
+    "api_source": {
+      "title": "Send information to another proccess",
+      "main": "./lib/actions/api.js"
     }
   },
   "actions": {
